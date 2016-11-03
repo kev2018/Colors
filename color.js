@@ -9,7 +9,7 @@ const Color = new Object();
 
 Color.isColor = function(rgb){
   //each color must be between 0 and 255. Also can be equal.
-var rgb = [];
+
   let redworks = (rgb[0] >= 0) && (rgb[0] <= 255);
   let greenworks = (rgb[1] >= 0) && (rgb[1] <= 255);
   let blueworks = (rgb[2] >= 0) && (rgb[2] <= 255);
@@ -22,25 +22,22 @@ var rgb = [];
   }
 };
 Color.redIntensity = function(rgb){
-  Math.round((redworks\255)*100);
-  return redworks;
+  var int0 =  Math.round((rgb[0]\255)*100);
+  return int0;
 };
-
 //greenIntensity
 Color.greenIntensity = function(rgb){
-    Math.round((greenworks\255)*100);
-    return greenworks;
+  var int1 = Math.round((rgb[1]\255)*100);
+  return int1;
 };
-
-
 //blueIntensity
 Color.blueIntensity = function(rgb){
-  Math.round((blueworks\255)*100);
-  return blueworks;
+  var int2 = Math.round((rgb[2]\255)*100);
+  return int2;
 };
-
-
 //brightness
-
-
+color.brightness = function(rgb){
+  var bright = (int0+int1+int2)/3;
+  return bright;
+};
 //complement
